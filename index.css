@@ -99,6 +99,7 @@ main{
 }
 .block__ul-item{
     color: var(--color-silent-white);
+    font-size: .8rem;
 }
 
 footer{
