@@ -1,0 +1,139 @@
+:root{
+    --color-cyan: hsl(179, 62%, 43%);
+    --color-light-cyan: hsla(179, 62%, 43%, .75);
+    --color-bright-yellow: hsl(71, 73%, 54%);
+    --color-light-gray: hsl(204, 43%, 93%);
+    --color-grayish-blue: hsl(218, 22%, 67%);
+    --color-silent-white: rgba(255, 255, 255, 0.68); /* this is not in the style guide, it is just for design convenience */
+    
+
+    font-size: 16px;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid black; */
+}
+em{
+    font-style: normal;
+}
+
+body{
+    background-color: var(--color-light-gray);
+}
+main{
+    max-width: max(250px, 80%);
+    margin: 0 auto;
+}
+
+.block{
+    padding: 5%;
+}
+.block--join{
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+}
+.block--subs{
+    background-color: var(--color-cyan);
+}
+.block--why{
+    background-color: var(--color-light-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+.block__heading{
+    font-family: Karla, auto;
+    font-weight: 700;
+    margin-bottom: 1.2em;
+    color: white;
+}
+.block__heading--main{
+    color: var(--color-cyan);
+}
+
+.block__paragraph{
+    font-family: Karla, auto;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    line-height: 1.3em;
+    color: var(--color-silent-white);
+}
+.block__paragraph--grayish{
+    color: var(--color-grayish-blue);
+}
+.block__paragraph--brighted{
+    color: var(--color-bright-yellow);
+}
+.block__paragraph__price{
+    font-family: Karla, auto;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    margin-right: .2em;
+    position: relative;
+    top: .2em;
+}
+
+.block__paragraph__button{
+    width: 100%;
+    padding: 3%;
+    margin-top: 5%;
+    border-radius: 10px;
+    background-color: var(--color-grayish-blue);
+    border: none;
+}
+.block__paragraph__button a{
+    text-decoration: none;
+    font-family: Karma, auto;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-silent-white);
+}
+
+.block__ul{
+    list-style-type: none;
+    
+}
+.block__ul-item{
+    color: var(--color-silent-white);
+}
+
+footer{
+    margin-top: 2%;
+}
+
+
+
+@media only screen and (min-width: 500px){
+    
+    body{
+        min-height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    main{
+        display: flex;
+        flex-flow: row wrap;
+        max-width: min(800px, 95%);
+    }
+
+    .block--join{
+        width: 100%;
+    }
+    .block--subs, .block--why{
+        width: 50%;
+    }
+    .block--subs{
+        border-radius: 0 0 0 10px;
+    }
+    .block--why{
+        border-radius: 0 0 10px 0;
+    }
+    
+
+
+}
